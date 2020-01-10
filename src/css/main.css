@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;  
+  width: 100%;
+}
+p, blockquote {
+  font-size: .9em;
+  line-height: 1.5em; /* space btn upline and downline */
+}
+ul {
+  list-style-type: none; /* specify type of list, none remove dots or nbrs of list */
+  margin: 0;
+  padding: 0;
+}
+.active {
+  background: rgb(46, 59, 59);
+  width: auto;
+}
+/* Make img move start */
+.scroll {
+  width: 30px;
+  animation: move 1s infinite alternate;
+}
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+/* Make img move end */
+
+.container {
+  text-align: center;
+  padding: .8em 1.2em;    /* work inside element n should accept 4 values work clockwise */
+}
+.server {
+  width: 70%;
+}
+.logo {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  background-color: rgb(30, 32, 32);
+  height: 3em;
+  display: flex; /*put all data contains in single element side by side*/
+  justify-content: space-between; /* put space btn two elements */
+}
+.hide-mobile {
+  display: none;
+}
+.menu {
+  width: 25px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.menu:hover {
+  border-radius: 10px;
+}
+
+h1, .subhead {
+  position: relative;
+  z-index: 3;
+}
+.subhead {
+  font-size: 1.1em;
+}
+.blue-container {
+  width: 100%;
+  background-color: #00C2FF;
+  margin-top: 15px;
+  padding: 4em 0 2em;
+  color: white;
+  border-top-left-radius: 4em;  /* border edges of the element like simcard*/
+  transform: skewY(-2deg);  /* This help us in rotation from horizonatl line(skewY)*/
+}
+.blue-container ul {
+  transform: skewY(2deg);
+}
+/* This create the up arc shape in right side */
+.blue-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #00C2FF;
+  position: absolute;
+  top: -39px;
+  right: 0;
+  z-index: -2;
+}
+.blue-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  z-index: -1;
+  border-radius: 50px;
+}
+.blue-container ul {
+  transform: skewY(2deg);
+}
+/* This create the up arc shape in right side end*/
+.blue-container ul li {
+  margin-bottom: 3em;
+}
+.blue-container ul li p {
+  padding: 0 .5em;
+}
+.blue-container img {
+  width: 22%;
+}
+/* To specify certain child u use nth-child */
+.blue-container ul li:nth-child(3) img {
+  width: 35%;
+}
+.gray-container {
+  background: #F6F6F6;
+  margin-top: -7px;
+  padding: 4em 0 2em;
+}
+.gray-container ul li {
+  padding: 2em;
+}
+.gray-container img {
+  border-radius: 50%; /* put images on circle  */
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+figcaption {
+  font-weight: bold;
+}
+.largeBtn {
+  background: #00cc80;
+  color: white;
+  width: 92%;
+  display: block;
+  padding: .5em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.5em;
+  position: relative;
+  margin: 3% auto 7%;
+  z-index: 4;
+}
+.footer-container {
+  background: #3D444A;
+  width: 100%;
+  color: white;
+  padding: 3em 0;
+  border-top-right-radius: 40px;
+  transform: skewY(2deg);
+}
+.footer-container .container {
+  transform: skewY(-2deg);
+}
+.footer-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #3D444A;
+  position: absolute;
+  z-index: -2;
+  top: -39px;
+  left: 0;
+}
+.footer-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  left: 0;
+  border-radius: 50%;
+}
+.footer-links {
+  margin: 0 auto;
+}
+.footer-links li {
+  display: inline-block;
+}
+.footer-links li a {
+  color: #9D9D9D;
+  font-size: .9em;
+  padding: 0 .3em;
+}
+nav ul {
+  position: fixed; /* if u scroll it keeps fixed */
+  right: 0;
+  top: 0;
+  width: 50%;
+  text-align: left;
+  background: rgb(30, 32, 32);
+  height: 100%;
+  z-index: 7;
+  padding-top: 3em;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: rgb(26, 36, 36);
+}
+nav ul li a:hover {
+  background-color: rgb(46, 59, 59);
+}
+.exitBtn {
+  margin-left: 8em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.results {
+  margin: 0 2em;
+}
+.formShape {
+  display: block;
+  padding: 0 3em;
+  word-wrap: break-word;
+}
+.formSideInfo {
+  display: none;
+}
+form {
+  text-align: left;
+  box-shadow: 0 4px 10px;
+  padding: 1em 2em 3em 2em;
+  width: 80%;
+}
+form label {
+  margin-bottom: 1em;
+  width: 40%;
+} 
+form input {
+  width: 100%;
+  height: 1.5em;
+  margin-bottom: 1em;
+}
+form button {
+  background-color: rgb(1, 16, 20);
+  color: white;
+  height: 3em;
+  width: 8em;
+  float: right;
+  border-radius: 9px;
+  box-shadow: 0px 5px 9px rgb(40, 42, 43);
+}
+form h5 {
+  color: red;
+  text-align: center;
+}
+form span a {
+  font-size: small;
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+  margin: 0 2em;
+  
+}
+.shortInfo a {
+  color: black;
+  font-size: small;
+}
+@media only screen and (min-width: 600px) {
+  .server {
+    width: 40%;
+  }
+  h1{
+    font-size: 3em;
+    margin: 0;
+  }
+  .subhead {
+    font-size: 1.4em;
+    margin-bottom: 12%;
+  }
+  .formShape {
+    display: flex;
+    justify-content: space-between;
+    padding: 0em;
+  }
+  .formSideInfo {
+    display: block;
+  }
+  form {
+    margin-left: 2em;
+  }
+  .blue-container {
+    margin: 0;
+  }
+  .blue-container img {
+    padding: 0;
+    width: 28%;
+  }
+  .blue-container ul {
+    display: flex;
+    margin-top: -1em;
+    align-items: center;
+  }
+  .blue-container ul li {
+    margin-bottom: 0;
+  }
+  .blue-container ul li p {
+    padding: 0 .8em; 
+  }
+  .gray-container ul {
+    display: flex;
+  }
+  .gray-container ul li {
+    margin-top: -2em;
+    margin-left: -2em; 
+    padding: 0;
+  }
+  .gray-container ul li img {
+    width: 10em;
+  }
+  .largeBtn {
+    width: 10em ;
+  }
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+  .hide-desktop {
+    display: none;
+  } 
+  nav ul {
+    position: inherit;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: 0;
+  }
+  nav ul li {
+    float: left;    
+    margin-top: -3em;
+  }
+  
+  nav ul li a{
+    background: none;
+  }
+  nav ul li a:hover {
+    background-color: rgb(46, 59, 59);
+    width: auto;
+  }
+}
